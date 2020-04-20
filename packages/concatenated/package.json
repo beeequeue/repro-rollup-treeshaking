@@ -1,0 +1,21 @@
+{
+  "name": "@beequeueue/concatenated",
+  "version": "0.0.0",
+  "author": "BeeeQueue",
+  "private": true,
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "sideEffects": false,
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "yarn tsdx lint --fix",
+      "prettier --write"
+    ]
+  },
+  "scripts": {
+    "build": "tsdx build --target web",
+    "precommit": "lint-staged"
+  }
+}
