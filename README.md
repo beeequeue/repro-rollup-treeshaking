@@ -4,7 +4,7 @@
 
 ## Description
 
-This is an example of how using the `preserveModules` option in rollup allows webpack to properly tree-shake unused modules, which it can otherwise not do.
+This is a minimal example of how using the `preserveModules` option in rollup allows webpack to properly tree-shake unused modules, which it can otherwise not do.
 
 There are two packages with the same configuration, except for [one using `preserveModules`](https://github.com/BeeeQueue/rollup-treeshaking-repro/tree/master/packages/preserved-modules) while the [other doesn't](https://github.com/BeeeQueue/rollup-treeshaking-repro/tree/master/packages/concatenated).
 
