@@ -1,0 +1,36 @@
+{
+  "name": "treeshaking",
+  "version": "0.1.0",
+  "author": "BeeeQueue",
+  "private": true,
+  "workspaces": ["packages/*"],
+  "engines": {
+    "node": ">=12"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "husky": "4.2.5",
+    "lerna": "3.20.2",
+    "lint-staged": "^10.1.6",
+    "tsdx": "0.13.2",
+    "tslib": "1.11.1",
+    "typescript": "3.8.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lerna run --concurrency 1 --stream precommit"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "yarn tsdx lint --fix",
+      "prettier --write"
+    ]
+  },
+  "scripts": {
+    "build": "tsdx build",
+    "lint": "tsdx lint",
+    "start": "tsdx watch",
+    "test": "tsdx test"
+  }
+}

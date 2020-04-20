@@ -1,0 +1,22 @@
+{
+  "name": "@beequeueue/preserved-modules",
+  "version": "0.0.0",
+  "author": "BeeeQueue",
+  "private": true,
+  "source": "src/react.ts",
+  "main": "dist/index.js",
+  "module": "dist/react.js",
+  "types": "dist/react.d.ts",
+  "files": ["dist"],
+  "sideEffects": false,
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "yarn tsdx lint --fix",
+      "prettier --write"
+    ]
+  },
+  "scripts": {
+    "build": "tsdx build --target web",
+    "precommit": "lint-staged"
+  }
+}
