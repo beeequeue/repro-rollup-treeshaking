@@ -1,0 +1,22 @@
+{
+  "name": "@beequeueue/client",
+  "version": "0.0.0",
+  "author": "BeeeQueue",
+  "private": true,
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "yarn tsdx lint --fix",
+      "prettier --write"
+    ]
+  },
+  "scripts": {
+    "build": "cross-env ANALYZE=true webpack -p",
+    "precommit": "lint-staged"
+  },
+  "devDependencies": {
+    "cross-env": "7.0.2",
+    "webpack": "4.42.1",
+    "webpack-bundle-analyzer": "3.7.0",
+    "webpack-cli": "3.3.11"
+  }
+}
