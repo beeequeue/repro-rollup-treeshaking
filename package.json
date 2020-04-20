@@ -32,6 +32,8 @@
     ]
   },
   "scripts": {
-    "build": "lerna run build"
+    "bootstrap": "npx lerna bootstrap",
+    "build": "lerna run build",
+    "postinstall": "lerna link"
   }
 }
